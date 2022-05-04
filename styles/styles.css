@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/background_desktop.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+.logo-container {
+  position: absolute;
+  padding: 2rem;
+}
+
+img.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35rem;
+  height: 45rem;
+  background: #fff;
+  text-align: center;
+}
+
+.container h1 {
+  margin-top: 6rem;
+  font-size: 2rem;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+form {
+  padding-top: 4rem;
+  width: 80%;
+  margin: auto;
+  opacity: 0;
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.175s 1 normal forwards;
+}
+
+form .input-container {
+  position: relative;
+  height: 4em;
+  background: rgba(126,126,126,0.1);
+  border: 2px solid rgba(126,126,126,0.1);
+  margin-bottom: 16px;
+  border-bottom-width: 1px;
+}
+
+form .input-value {
+  float: right;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+form .input-value label, form .input-value input {
+  padding: 1px 0.4em 1px 0.4em;
+}
+
+form .input-value + * {
+  clear: both;
+}
+
+form .input-value {
+  width: 100%;
+}
+
+form input {
+  display: block;
+  position: absolute;
+  height: 2.4em;
+  border: 0;
+  background: none;
+  z-index: 1;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Maven', sans-serif;
+  letter-spacing: 0.012em;
+  color: #333;
+}
+
+form input[type=text], form input[type=password] {
+  width: 100%;
+  padding-top: 1em;
+}
+
+form label {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  margin-top: 2px;
+  padding: 1px;
+  color: #525252;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  animation-name: labelIn;
+  animation-duration: 0.2s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+form input:focus + label, form input:valid + label {
+  font-weight: bold;
+  animation-name: labelOut;
+  animation-duration: 0.2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes labelIn {
+  0% {
+    left: 1px;
+    opacity: 1;
+    top: 1.2em;
+    font-size: 1em;
+    padding-left: 1em;
+  }
+  50% {
+    font-size: 1em;
+    left: 1em;
+    opacity: 0;
+    top: 1.2em;
+    padding-left: 1em;
+  }
+  50.01% {
+    font-size: 0.85em;
+    left: 1em;
+    opacity: 0;
+    top: 0.2em;
+  }
+  100% {
+    font-size: 0.85em;
+    opacity: 1;
+    left: 1px;
+    top: 0.2em;
+  }
+}
+
+@keyframes labelOut {
+  0% {
+    left: 1px;
+    opacity: 1;
+    top: 1.2em;
+    font-size: 1em;
+    padding-left: 1em;
+  }
+  50% {
+    font-size: 1em;
+    left: 1em;
+    opacity: 0;
+    top: 1.2em;
+    padding-left: 1em;
+  }
+  50.01% {
+    font-size: 0.85em;
+    left: 1em;
+    opacity: 0;
+    top: 0.2em;
+  }
+  100% {
+    font-size: 0.85em;
+    opacity: 1;
+    left: 1px;
+    top: 0.2em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.social {
+  display: flex;
+}
+
+.social > div {
+  width: 33.3%;
+  height: 3em;
+  border: 2px solid rgba(0,0,0,0.05);
+  border-radius: 4px;
+  margin: 10px;
+  line-height: 3em;
+}
+
+.social > div:first-child {
+  margin-left: 0;
+}
+
+.social > div:last-child {
+  margin-right: 0;
+}
+
+.social > div i {
+  font-size: 26px;
+}
+
+.social .facebook {
+  color: #fff;
+  background-color: #1877f2;
+}
+
+.social .facebook:hover {
+  cursor: pointer;
+  background-color: #0966DE;
+}
+
+.social .google:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.social .apple {
+  color: #fff;
+  background-color: #000;
+}
+
+.social .apple:hover {
+  cursor: pointer;
+}
+
+form .checkbox {
+  position: relative;
+  text-align: left;
+  height: 2.4em;
+}
+
+form .checkbox label {
+  text-transform: none;
+  margin: -4px 20px;
+}
+
+.checkbox-color {
+  filter: hue-rotate(145deg);
+}
+
+input[type=checkbox] {
+  position: relative;
+  top: 50%;
+  transform: scale(2);
+  font-size: 1em;
+  height: auto;
+  margin-left: 8px;
+}
+
+form .button {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+form .button .btn {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 30%;
+  color: #e8e8e8;
+  background: #d13639;
+  border: 0;
+  font-size: 3rem;
+}
+
+form .button .btn:hover {
+  background: #bc252a;
+  cursor: pointer;
+}
+
+form .bottom-links {
+  position: relative;
+  margin-top: 3em;
+  text-transform: uppercase;
+}
+
+form .bottom-links > p {
+  font-family: 'Maven Pro', sans-serif;
+  padding: 2px;
+}
+
+form .bottom-links a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+
+form .bottom-links a:hover {
+  color: #000;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 25rem;
+    height: 35rem;
+  }
+  .container h1 {
+    margin-top: 2rem !important;
+  }
+  form {
+    padding-top: 1rem !important;
+  }
+  form .button {
+    margin-top: 1.5rem !important;
+  }
+  form .bottom-links {
+    margin-top: 1em !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 20rem;
+    height: 33rem;
+  }
+  .container h1 {
+    margin-top: 1rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 18rem;
+    height: 30rem;
+  }
+  .container h1 {
+    margin-top: 0.5rem !important;
+  }
+  form .button {
+    margin-top: 0.5rem !important;
+  }
+  form .bottom-links {
+    margin-top: 0 !important;
+  }
+}
+
+*:focus {
+  outline-color: #000;
+}
